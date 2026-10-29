@@ -31,6 +31,19 @@ Machine Learning and moving towards applied AI and intelligent automation.
 
 ## Selected public projects
 
+### [OfferDiff](https://github.com/Vahid-arch/offerdiff): catch Google Shopping price mismatches before Google does
+
+Open-source C#/.NET 10 command-line tool that compares a product feed with the schema.org
+Product/Offer JSON-LD on each product page, and reports **match**, **mismatch** or **unknown**
+per product, with evidence. It targets the Merchant Center "mismatched value (page crawl)"
+disapprovals that switch off Shopping ads.
+
+- Matches offers by URL, then SKU, then single offer; ambiguous or conflicting data is reported
+  as unknown, never guessed
+- Handles ProductGroup variants, AggregateOffer, `@graph`, multiple and invalid JSON-LD blocks
+- 77 xUnit tests with synthetic fixtures; GitHub Actions CI on Windows and Ubuntu
+- Built through pull requests with CI checks; v0.1.0 prototype released, live-site checking in progress
+
 ### [BlueCart](https://github.com/Vahid-arch/bluecart): e-commerce API and storefront
 
 ASP.NET Core API in a layered architecture (API, Core, Infrastructure) with around 50 REST
@@ -56,18 +69,19 @@ Vue 3 application with separate workspaces for administrators and sales represen
 
 | | Technologies |
 | --- | --- |
-| **Backend** | C#, ASP.NET Core, REST APIs, Entity Framework Core, JWT authentication |
+| **Backend** | C#, .NET 10, ASP.NET Core, REST APIs, Entity Framework Core, JWT authentication |
 | **Frontend** | Vue 3, Angular, TypeScript, JavaScript, HTML, CSS, Tailwind CSS |
 | **Mobile** | Flutter, Dart (web and mobile from one codebase) |
 | **Data** | SQL Server, Redis, Firebase |
+| **Testing and CI** | xUnit, automated testing, GitHub Actions |
 | **Cloud and tools** | Microsoft Azure, Docker, Git, GitHub, Swagger |
-| **Currently learning** | Python, machine learning, model evaluation, automated testing, CI/CD |
+| **Currently learning** | Python, machine learning, model evaluation |
 
 ## Current focus
 
 - Applying machine learning to practical e-commerce and operations problems
 - Intelligent automation that removes repetitive work for business and development teams
-- Open-source development: tested, documented tools that others can install and use
+- Open-source development: growing OfferDiff into a tool real stores can run against live sites
 
 ## Contact
 
