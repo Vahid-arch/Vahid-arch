@@ -38,11 +38,13 @@ Product/Offer JSON-LD on each product page, and reports **match**, **mismatch** 
 per product, with evidence. It targets the Merchant Center "mismatched value (page crawl)"
 disapprovals that switch off Shopping ads.
 
+- Live mode checks real stores safely: private-address (SSRF) blocking, 1 request per second per
+  site, `Retry-After` handling and robots.txt (RFC 9309)
 - Matches offers by URL, then SKU, then single offer; ambiguous or conflicting data is reported
   as unknown, never guessed
-- Handles ProductGroup variants, AggregateOffer, `@graph`, multiple and invalid JSON-LD blocks
-- 77 xUnit tests with synthetic fixtures; GitHub Actions CI on Windows and Ubuntu
-- Built through pull requests with CI checks; v0.1.0 prototype released, live-site checking in progress
+- 205 xUnit tests with synthetic fixtures and no real network; CI on Windows and Ubuntu, plus CodeQL
+- v0.2.0 released with single-file binaries for Windows, Linux and macOS, built by GitHub Actions
+- [Live demo store](https://vahid-arch.github.io/offerdiff/demo/) on GitHub Pages: try it in one command
 
 ### [BlueCart](https://github.com/Vahid-arch/bluecart): e-commerce API and storefront
 
@@ -81,7 +83,8 @@ Vue 3 application with separate workspaces for administrators and sales represen
 
 - Applying machine learning to practical e-commerce and operations problems
 - Intelligent automation that removes repetitive work for business and development teams
-- Open-source development: growing OfferDiff into a tool real stores can run against live sites
+- Open-source development: adding JavaScript rendering to OfferDiff so it can check modern
+  Angular, React and Vue stores
 
 ## Contact
 
