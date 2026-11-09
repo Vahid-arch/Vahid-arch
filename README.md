@@ -40,10 +40,14 @@ disapprovals that switch off Shopping ads.
 
 - Live mode checks real stores safely: private-address (SSRF) blocking, 1 request per second per
   site, `Retry-After` handling and robots.txt (RFC 9309)
+- Render mode runs each page in headless Chromium, so it also checks Angular, React and Vue stores
+  whose structured data is added by JavaScript; every browser connection goes through the same
+  SSRF guard, including redirects and WebSockets
 - Matches offers by URL, then SKU, then single offer; ambiguous or conflicting data is reported
   as unknown, never guessed
-- 205 xUnit tests with synthetic fixtures and no real network; CI on Windows and Ubuntu, plus CodeQL
-- v0.2.0 released with single-file binaries for Windows, Linux and macOS, built by GitHub Actions
+- 306 xUnit tests with synthetic fixtures and no real network; CI on Windows and Ubuntu, plus CodeQL
+- v0.3.0 released with single-file binaries for Windows, Linux and macOS (core and render builds),
+  built by GitHub Actions; verified on a real Angular storefront
 - [Live demo store](https://vahid-arch.github.io/offerdiff/demo/) on GitHub Pages: try it in one command
 
 ### [BlueCart](https://github.com/Vahid-arch/bluecart): e-commerce API and storefront
@@ -83,8 +87,7 @@ Vue 3 application with separate workspaces for administrators and sales represen
 
 - Applying machine learning to practical e-commerce and operations problems
 - Intelligent automation that removes repetitive work for business and development teams
-- Open-source development: adding JavaScript rendering to OfferDiff so it can check modern
-  Angular, React and Vue stores
+- Open-source development: maintaining OfferDiff and building my next open-source ML project
 
 ## Contact
 
